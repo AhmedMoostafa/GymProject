@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Exercise extends Model
 {
+  protected $guarded = [];
+
   public function equipments()
   {
     return $this->belongsToMany(Equipment::class);
