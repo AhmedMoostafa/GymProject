@@ -2,15 +2,13 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Models\Item;
+use App\Models\Meal;
 use Faker\Generator as Faker;
 
-$factory->define(Item::class, function (Faker $faker) {
+$factory->define(Meal::class, function (Faker $faker) {
     return [
         //
-        'cal' => $this->faker->numberBetween($min = 100, $max = 10000),
         'title' => $this->faker->word(),
-        'level' => $this->faker->randomElement($array = array ('red','green','yellow')),
         //'nutritionist_id' => factory(App\Nutritionist::class),
     ];
 });
