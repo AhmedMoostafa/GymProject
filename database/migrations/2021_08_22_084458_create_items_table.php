@@ -16,7 +16,7 @@ class CreateItemsTable extends Migration
         Schema::create('item', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('cal')->unsigned()->default(0);
-            $table->string('title');
+            $table->string('title')->unique();
             $table->enum('level', ['green', 'yellow', 'red'])->default('green');
             //$table->unsignedBigInteger('nutritionist_id');
             //$table->foreign('nutritionist_id')->references('id')->on('nutritionist');

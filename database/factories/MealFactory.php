@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Meal::class, function (Faker $faker) {
     return [
         //
-        'title' => $this->faker->word(),
-        //'nutritionist_id' => factory(App\Nutritionist::class),
+        'title' => $this->faker->unique()->word(),
+        //'nutritionist_id' => factory(App\Models\Nutritionist::class),
     ];
 });

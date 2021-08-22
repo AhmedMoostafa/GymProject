@@ -15,7 +15,7 @@ class CreatePlansTable extends Migration
     {
         Schema::create('plan', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
+            $table->string('title')->unique();
             $table->text('description');
             //$table->unsignedBigInteger('nutritionist_id');
             //$table->foreign('nutritionist_id')->references('id')->on('nutritionist');

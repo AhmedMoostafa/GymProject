@@ -8,4 +8,7 @@ class Item extends Model
 {
     //
     protected $table = 'item';
+    protected $fillable = [
+        'title', 'cal', 'level'
+    ];
 }

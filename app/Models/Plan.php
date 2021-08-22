@@ -8,4 +8,7 @@ class Plan extends Model
 {
     //
     protected $table = 'plan';
+    protected $fillable = [
+        'title', 'description'
+    ];
 }

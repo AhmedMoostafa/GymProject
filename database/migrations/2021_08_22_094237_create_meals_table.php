@@ -15,7 +15,7 @@ class CreateMealsTable extends Migration
     {
         Schema::create('meal', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
+            $table->string('title')->unique();
             //$table->unsignedBigInteger('nutritionist_id');
             //$table->foreign('nutritionist_id')->references('id')->on('nutritionist');
             $table->timestamps();

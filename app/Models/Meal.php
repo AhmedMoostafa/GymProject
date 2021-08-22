@@ -8,4 +8,7 @@ class Meal extends Model
 {
     //
     protected $table = 'meal';
+    protected $fillable = [
+        'title'
+    ];
 }
