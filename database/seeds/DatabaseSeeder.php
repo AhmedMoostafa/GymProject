@@ -4,6 +4,10 @@ use Illuminate\Database\Seeder;
 use App\Models\Meal;
 use App\Models\Item;
 use App\Models\Plan;
+use App\Exercise;
+use App\Group;
+use App\PrivateSession;
+use App\Set;
 
 class DatabaseSeeder extends Seeder
 {
