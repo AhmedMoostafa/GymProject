@@ -11,4 +11,24 @@ class Plan extends Model
     protected $fillable = [
         'title', 'description'
     ];
+
+    public function nutritionist()
+    {
+        return $this->belongsTo(Nutritionist::class);
+    }
+
+    public function meals()
+    {
+        return $this->belongsToMany(Meal::class, 'meal_plan');
+    }
+
+    public function items()
+    {
+        return $this->belongsToMany(Item::class, 'item_plan');
+    }
+
+    public function member()
+    {
+        return $this->belongsToMany(Member::class);
+    }
 }

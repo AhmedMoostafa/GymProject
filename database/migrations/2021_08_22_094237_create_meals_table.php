@@ -20,6 +20,15 @@ class CreateMealsTable extends Migration
             //$table->foreign('nutritionist_id')->references('id')->on('nutritionist');
             $table->timestamps();
         });
+
+        Schema::create('item_meal', function (Blueprint $table) {
+            $table->integer('quantity')->unsigned();
+            $table->unsignedBigInteger('item_id');
+            $table->unsignedBigInteger('meal_id');
+            $table->foreign('item_id')->references('id')->on('item');
+            $table->foreign('meal_id')->references('id')->on('meal');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -30,5 +39,6 @@ class CreateMealsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('meal');
+        Schema::dropIfExists('item_meal');
     }
 }
